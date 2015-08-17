@@ -1,0 +1,118 @@
+html{
+  font-size: 62.5%; // established for the rem
+  background-color: #f06d06;
+}
+
+h1{
+  font-size: 9.6rem;
+  line-height: 10rem;
+  color: rgba(0, 0, 0,.85);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.child{
+  width: 500px;
+	height: 660px;
+  background-color: white;
+}
+
+.position{
+  font-size: 9px;
+  color: grey;
+}
+
+p.position-description{
+  font-size: 9px;
+  margin-bottom: 1rem;
+}
+
+.category{
+  font-size: 10px;
+  color: grey;
+}
+
+.my-name{
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.my-contact{
+  margin-top: 2rem;
+  display:none;
+}
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	min-width: 500px;
+	min-height: 660px;
+
+  width: 500px;
+	height: 660px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  background-color:white;
+  box-shadow: 0px 0px 10px #222222;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  box-shadow: 0px 0px 10px #222222;
+}
+
+.child {
+}
+
+.container {
+  position: relative;
+}
+
+xmp{
+  margin:3rem;
+  margin-left:5rem;
+  width: 400px;
+  font-size: 9.2px;
+   white-space: pre-wrap;       /* css-3 */
+   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+   white-space: -pre-wrap;      /* Opera 4-6 */
+   white-space: -o-pre-wrap;    /* Opera 7 */
+   word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
